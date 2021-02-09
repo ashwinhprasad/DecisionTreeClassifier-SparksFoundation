@@ -43,3 +43,8 @@ x_test_d = pca.fit_transform(x_test)
 fig = plt.figure()
 plt.scatter(x_test_d[:,0],x_test_d[:,1],c=y_pred)
 st.pyplot(fig)
+
+# github directory for code
+st.markdown("""
+    Github Repo : https://github.com/ashwinhprasad/Streamlit-RandomForestClassifier
+""")
