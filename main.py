@@ -19,8 +19,10 @@ st.markdown("""
 data = load_iris(as_frame=True)
 x = data['data']
 y = data['target']
-st.markdown("""## Sample Data""")
-st.write(x.head(),y.head())
+
+if st.button("Display Sample Data"):
+    st.markdown("""## Sample Data""")
+    st.write(x.head(),y.head())
 
 # parameter
 st.sidebar.header("Parameters")
