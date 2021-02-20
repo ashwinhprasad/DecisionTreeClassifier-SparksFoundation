@@ -9,6 +9,7 @@ pandas = "*"
 numpy = "*"
 streamlit = "*"
 matplotlib = "*"
+graphviz = "*"
 
 [dev-packages]
 
