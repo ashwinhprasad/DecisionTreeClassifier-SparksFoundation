@@ -1,3 +1,4 @@
+# importing the libraries
 import streamlit as st
 import numpy as np
 import pandas as pd
@@ -8,9 +9,11 @@ from sklearn.decomposition import PCA
 from sklearn.preprocessing import LabelEncoder
 
 # header
+st.image("./images/thumbnail.jpg")
+
 st.markdown("""
     # Prediction Using Decision Tree
-    This is a simple dashboard for performing a simple classification task
+    This is a simple web app for performing a simple classification task
     using Decision Tree Algorithm and to check which parameters give us an optimized
     result
 """)
@@ -31,7 +34,7 @@ criterion = st.sidebar.selectbox("Select Your Criterion",["gini","entropy"])
 # train test split
 x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.2,random_state=123)
 
-# training
+# fitting the model
 clf = DecisionTreeClassifier(criterion=criterion)
 clf.fit(x_train,y_train)
 y_pred  = clf.predict(x_test)
@@ -68,5 +71,5 @@ st.write(clf.predict(x_test.reshape(-1,4)))
 
 # github directory for code
 st.markdown("""
-    Github Repo : https://github.com/ashwinhprasad/Streamlit-RandomForestClassifier
+    Github Repo : https://github.com/ashwinhprasad/DecisionTreeClassifier-SparksFoundation
 """)
